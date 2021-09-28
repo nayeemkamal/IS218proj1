@@ -25,7 +25,7 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ms-auto">
-                        <li class="nav-item"><a class="nav-link" href="#about">GIT</a></li>
+                        <li class="nav-item"><a class="nav-link" href="GIT.html">GIT</a></li>
                         <li class="nav-item"><a class="nav-link" href="#projects">Terminal</a></li>
                         <li class="nav-item"><a class="nav-link" href="vi.html">Vi</a></li>
                         <li class="nav-item"><a class="nav-link" href="#signup">Docker</a></li>
@@ -39,9 +39,9 @@
             <div class="container px-4 px-lg-5 d-flex h-100 align-items-center justify-content-center">
                 <div class="d-flex justify-content-center">
                     <div class="text-center">
-                        <h1 class="mx-auto my-0 text-uppercase">Git Tutorial</h1>
-                        <h2 class="text-white-50 mx-auto mt-2 mb-5">Step by step tutorial on how to get started with Git.</h2>
-                        <a class="btn btn-primary" href="#projects">Get Started with Git</a>
+                        <h1 class="mx-auto my-0 text-uppercase">Vi Tutorial</h1>
+                        <h2 class="text-white-50 mx-auto mt-2 mb-5">Step by step tutorial on how to get started with Vi.</h2>
+                        <a class="btn btn-primary" href="#projects">Get Started with Vi</a>
                     </div>
                 </div>
             </div>
@@ -52,17 +52,17 @@
             <div class="container px-4 px-lg-5">
                 <!-- Featured Project Row-->
                 <div class="row gx-0 mb-4 mb-lg-5 align-items-center">
-                    <h3>What is Git?</h3>
+                    <h3>What is Vi?</h3>
                     <p>Git is the most commonly used version control system. Git tracks the changes you make to files, so you have a record of what has been done, and you can revert to specific versions should you ever need to. Git also makes collaboration easier, allowing changes by multiple people to all be merged into one source.</p>
-                    <h3>Get started with Git.</h3>
+                    <h3>Get started with Vi.</h3>
                     <div class="container px-4 px-lg-5">
                         <!-- Featured Project Row-->
                         <div class="row gx-0 mb-4 mb-lg-5 align-items-center">
-                    <div class="col-xl-8 col-lg-7"><img class="img-fluid mb-3 mb-lg-0" src="assets/img/Gitstep1.png" alt="..." /></div>
+                    <div class="col-xl-8 col-lg-7"><img class="img-fluid mb-3 mb-lg-0" src="assets/img/1.png" alt="..." /></div>
                     <div class="col-xl-4 col-lg-5">
                         <div class="featured-text text-center text-lg-left">
                             <h4>Step 1</h4>
-                            <p class="text-black-50 mb-0">Create a new "repository" (project) on github.</p>
+                            <p class="text-black-50 mb-0">Type the command "vi [filename] to create a new file</p>
                         </div>
                     </div>
                     </div>
@@ -70,11 +70,11 @@
                     <div class="container px-4 px-lg-5">
                         <!-- Featured Project Row-->
                         <div class="row gx-0 mb-4 mb-lg-5 align-items-center">
-                    <div class="col-xl-8 col-lg-7"><img class="img-fluid mb-3 mb-lg-0" src="assets/img/Gitstep2.png" alt="..." /></div>
+                    <div class="col-xl-8 col-lg-7"><img class="img-fluid mb-3 mb-lg-0" src="assets/img/2.png" alt="..." /></div>
                     <div class="col-xl-4 col-lg-5">
                         <div class="featured-text text-center text-lg-left">
                             <h4>Step 2</h4>
-                            <p class="text-black-50 mb-0">Copy (or clone) the repository to your local machine. Use the commans git clone and paste the github link to your repo. The link to the repo can be found on github.</p>
+                            <p class="text-black-50 mb-0">To instert text in the file type 'i'. This opens up the instert editor where you can type in your text. For the example we types hello world. </p>
                         </div>
                     </div>
                     </div>
@@ -82,59 +82,105 @@
                     <div class="container px-4 px-lg-5">
                         <!-- Featured Project Row-->
                         <div class="row gx-0 mb-4 mb-lg-5 align-items-center">
-                    <div class="col-xl-8 col-lg-7"><img class="img-fluid mb-3 mb-lg-0" src="assets/img/Gitstep1.png" alt="..." /></div>
+                    <div class="col-xl-8 col-lg-7"><img class="img-fluid mb-3 mb-lg-0" src="assets/img/3.png" alt="..." /></div>
                     <div class="col-xl-4 col-lg-5">
                         <div class="featured-text text-center text-lg-left">
                             <h4>Step 3</h4>
-                            <p class="text-black-50 mb-0">Create a new "repository" (project) on github.</p>
+                            <p class="text-black-50 mb-0">When done editing the file press the esc key. then to exit vi press ZZ. Check the text of the file by using the "cat [filename] command.</p>
                         </div>
                     </div>
-                    </div>
-                    </div>
-                    <h1>Git Commands</h1>
+
+            </div>
+            </div>
+                    <h1>Vi Commands</h1>
     <table>
         <tr>
           <th>Commands</th>
           <th>Definition</th>
         </tr>
         <tr>
-          <td>git init</td>
-          <td>initialize an existing directory as a Git repository</td>
+          <td>ZZ</td>
+          <td>save and exit.</td>
         </tr>
         <tr>
-          <td>git add [file]</td>
-          <td>add a file as it looks now to your next commit (stage) / . adds all files</td>
+          <td>:q!</td>
+          <td>discard all changes, since the last save, and exit.</td>
         </tr>
         <tr>
-          <td>git commit -m “[descriptive message]”</td>
-          <td>commit your staged content as a new commit snapshot</td>
+          <td>:w</td>
+          <td>save file but don't exit.</td>
         </tr>
         <tr>
-          <td>git checkout -b [branch-name]</td>
-          <td>creates a branch and goes to the branch</td>
+          <td>:wq</td>
+          <td>save and exit. </td>
         </tr>
         <tr>
-          <td>git checkout [branch-name]</td>
-          <td>goes to the specified branch</td>
+          <td>vi [filename]</td>
+          <td>Create a new file in the directory.</td>
         </tr>
         <tr>
-          <td>git branch</td>
-          <td>list your branches. a * will appear next to the currently active branch</td>
+          <td>G</td>
+          <td>move to the last line.</td>
         </tr>
         <tr>
-            <td>git push origin [branch]</td>
-            <td>transmits local branch commit to the remote repository branch</td>
+            <td>w</td>
+            <td>move to the beginning of the next word.</td>
           </tr>
           <tr>
-            <td>git pull origin [branch]</td>
-            <td>fetch and merge any commits from tracking remote branch</td>
+            <td>nw</td>
+            <td>move forward n numbber of words.</td>
           </tr>
           <tr>
-            <td>git clone [URL]</td>
-            <td>retrieve and entire repository from a hosted location via [URL]</td>
-          </tr><tr>
-            <td>git merge [branch]</td>
-            <td>merge the specified branch's history into the current one</td>
+            <td>b</td>
+            <td>move to the beginning of the previous word.</td>
+          </tr>
+          <tr>
+            <td>nb</td>
+            <td>move back n number of words.</td>
+          </tr>
+          <tr>
+            <td>x</td>
+            <td>delete a single character.</td>
+          </tr>
+          <tr>
+            <td>nx</td>
+            <td>delete n characters</td>
+          </tr>
+          <tr>
+            <td>dd</td>
+            <td>delete the current line</td>
+          </tr>
+          <tr>
+            <td>u</td>
+            <td>undo the last action.</td>
+          </tr>
+          <tr>
+            <td>U</td>
+            <td>undo all changes to the current line. </td>
+          </tr>
+          <tr>
+            <td>cat</td>
+            <td>view a file.</td>
+          </tr>
+          <tr>
+            <td>less</td>
+            <td>view a file. better for larger files.</td>
+          </tr>
+          <tr>
+            <td>ARROW KEYS</td>
+            <td>move the cursor around.</td>
+          </tr>
+          <tr>
+            <td>^</td>
+            <td>move the cursor to beginning of current line</td>
+          </tr>
+          <tr>
+            <td>$</td>
+            <td>move cursor to end of the current line.</td>
+          </tr>
+          <tr>
+            <td>{</td>
+            <td>move backwards one paragraph.</td>
           </tr>
       </table>
                 </div>
