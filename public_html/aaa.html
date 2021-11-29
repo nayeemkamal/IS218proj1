@@ -1,0 +1,790 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>IS218 Tutorial</title>
+    <!-- Font Awesome icons (free version)-->
+    <script src="https://use.fontawesome.com/releases/v5.15.3/js/all.js" crossorigin="anonymous"></script>
+    <!-- Google fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+        rel="stylesheet" />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="css/styles.css" rel="stylesheet" />
+</head>
+
+<body id="page-top">
+    <!-- Navigation-->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+        <div class="container px-4 px-lg-5">
+            <a class="navbar-brand" href="./index.html">IS218 Tutorial</a>
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+                aria-label="Toggle navigation">
+                Menu
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="./git.html">GIT</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./terminal.html">Terminal</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./docker.html">Docker</a></li>
+                    <li class="nav-item"><a class="nav-link" href="vi.html">Vi</a></li>
+                    <li class="nav-item"><a class="nav-link" href="pylint.html">Pylint</a></li>
+                    <li class="nav-item"><a class="nav-link" href="aaa.html">AAA Testing</a></li>
+
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Masthead-->
+    <header class="masthead">
+        <div class="container px-4 px-lg-5 d-flex h-100 align-items-center justify-content-center">
+            <div class="d-flex justify-content-center">
+                <div class="text-center">
+                    <h1 class="mx-auto my-0 text-uppercase">AAA Testing Tutorial</h1>
+                    <h2 class="text-white-50 mx-auto mt-2 mb-5">Tutorial on how to get started with AAA Testing and
+                        python.
+                    </h2>
+                    <a class="btn btn-primary" href="#projects">Get Started with AAA Testing</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Projects-->
+    <section class="projects-section bg-light" id="projects">
+        <div class="container px-4 px-lg-5">
+            <!-- Featured Project Row-->
+            <div class="row gx-0 mb-4 mb-lg-5 align-items-center">
+                <h3>What is Testing?</h3>
+                <p>A test is a procedure that exercises a behavior to determine if the behavior functions correctly.
+                    There are several different kinds of tests, like unit tests, integration tests, or end-to-end tests,
+                    but all functional tests do the same basic thing: they try something and report PASS or FAIL.
+
+                </p>
+                <div class="container px-4 px-lg-5">
+                    <!-- Featured Project Row-->
+                    <section id="getting-started">
+                        <h2>The Pattern</h2>
+                        <ol>
+                            <li><strong><em>Arrange</em> </strong>inputs and targets. <em>Arrange </em>steps should set
+                                up the test case. Does the test require any objects or special settings? Does it need to
+                                prep a database? Does it need to log into a web app? Handle all of these operations at
+                                the start of the test.</li>
+                            <li><strong><em>Act</em> </strong>on the target behavior. <em>Act </em>steps should cover
+                                the main thing to be tested. This could be calling a function or method, calling a REST
+                                API, or interacting with a web page. Keep actions focused on the target behavior.</li>
+                            <li><strong><em>Assert</em> </strong>expected outcomes. <em>Act </em>steps should elicit
+                                some sort of response. <em>Assert </em>steps verify the goodness or badness of that
+                                response. Sometimes, assertions are as simple as checking numeric or string values.
+                                Other times, they may require checking multiple facets of a system. Assertions will
+                                ultimately determine if the test passes or fails.</li>
+                        </ol>
+                        <p>Here’s a basic unit test for Python’s absolute value function:</p>
+
+
+                        <div class="wp-block-syntaxhighlighter-code ">
+                            <div>
+                                <div id="highlighter_630660" class="syntaxhighlighter  python">
+                                    <table border="0" cellpadding="0" cellspacing="0">
+                                        <tbody>
+                                            <tr>
+
+                                                <td class="code">
+                                                    <div class="container">
+                                                        <div class="line number1 index0 alt2"><code
+                                                                class="python keyword">def</code> <code
+                                                                class="python plain">test_abs_for_a_negative_number():</code>
+                                                        </div>
+                                                        <div class="line number2 index1 alt1">&nbsp;</div>
+                                                        <div class="line number3 index2 alt2"><code
+                                                                class="python spaces">&nbsp;&nbsp;</code><code
+                                                                class="python comments"># Arrange</code></div>
+                                                        <div class="line number4 index3 alt1"><code
+                                                                class="python spaces">&nbsp;&nbsp;</code><code
+                                                                class="python plain">negative </code><code
+                                                                class="python keyword">=</code>
+                                                            <code class="python keyword">-</code><code
+                                                                class="python value">5</code>
+                                                        </div>
+                                                        <div class="line number5 index4 alt2"><code
+                                                                class="python spaces">&nbsp;&nbsp;</code>&nbsp;</div>
+                                                        <div class="line number6 index5 alt1"><code
+                                                                class="python spaces">&nbsp;&nbsp;</code><code
+                                                                class="python comments"># Act</code></div>
+                                                        <div class="line number7 index6 alt2"><code
+                                                                class="python spaces">&nbsp;&nbsp;</code><code
+                                                                class="python plain">answer </code><code
+                                                                class="python keyword">=</code>
+                                                            <code class="python functions">abs</code><code
+                                                                class="python plain">(negative)</code>
+                                                        </div>
+                                                        <div class="line number8 index7 alt1"><code
+                                                                class="python spaces">&nbsp;&nbsp;</code>&nbsp;</div>
+                                                        <div class="line number9 index8 alt2"><code
+                                                                class="python spaces">&nbsp;&nbsp;</code><code
+                                                                class="python comments"># Assert</code></div>
+                                                        <div class="line number10 index9 alt1"><code
+                                                                class="python spaces">&nbsp;&nbsp;</code><code
+                                                                class="python keyword">assert</code> <code
+                                                                class="python plain">answer </code><code
+                                                                class="python keyword">=</code><code
+                                                                class="python keyword">=</code> <code
+                                                                class="python value">5</code></div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <p>This test may seem trivial, but we can use it to illustrate our pattern. </p>
+
+
+
+                        <ol>
+                            <li>The <em>Arrange </em>step creates a variable named “negative” for testing.</li>
+                            <li>The <em>Act </em>step calls the “abs” function using the “negative” variable and stores
+                                the returned value
+                                in a variable named “answer.”</li>
+                            <li>The <em>Assert </em>step verifies that “answer” is a positive value.</li>
+                        </ol>
+                    </section>
+
+                    <p>tutorial sourced from automationpanda</p>
+                </div>
+            </div>
+            <h1>Testing with pandas and csv</h1>
+            <div class="section" id="testing-with-pandas">
+                <h1>Testing With Pandas<a class="headerlink" href="#testing-with-pandas"
+                        title="Permalink to this headline"></a></h1>
+                <p>Datatest can validate <a class="reference external"
+                        href="https://pandas.pydata.org/pandas-docs/stable/index.html#module-pandas"
+                        title="(in pandas v1.2.1)"><code
+                            class="xref py py-mod docutils literal notranslate"><span class="pre">pandas</span></code></a>
+                    objects (<a class="reference external"
+                        href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html#pandas.DataFrame"
+                        title="(in pandas v1.2.1)"><code
+                            class="xref py py-class docutils literal notranslate"><span class="pre">DataFrame</span></code></a>,
+                    <a class="reference external"
+                        href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.Series.html#pandas.Series"
+                        title="(in pandas v1.2.1)"><code
+                            class="xref py py-class docutils literal notranslate"><span class="pre">Series</span></code></a>,
+                    and
+                    <a class="reference external"
+                        href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.Index.html#pandas.Index"
+                        title="(in pandas v1.2.1)"><code
+                            class="xref py py-class docutils literal notranslate"><span class="pre">Index</span></code></a>)
+                    the same way it does with
+                    built-in types.
+                </p>
+                <div class="section" id="some-examples">
+                    <h2>Some Examples<a class="headerlink" href="#some-examples"
+                            title="Permalink to this headline"></a></h2>
+                    <p>This example uses a <a class="reference external"
+                            href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html#pandas.DataFrame"
+                            title="(in pandas v1.2.1)"><code
+                                class="xref py py-class docutils literal notranslate"><span class="pre">DataFrame</span></code></a>
+                        to
+                        load and inspect data from a CSV file (<a class="reference download internal" download=""
+                            href="../_downloads/c6d2b890089b904d75709b0a046ab208/movies.csv"><code
+                                class="xref download docutils literal notranslate"><span class="pre">movies.csv</span></code></a>).
+                        The CSV file uses the
+                        following format:</p>
+                    <div class="wy-table-responsive">
+                        <table class="docutils align-default">
+                            <colgroup>
+                                <col style="width: 25%">
+                                <col style="width: 25%">
+                                <col style="width: 25%">
+                                <col style="width: 25%">
+                            </colgroup>
+                            <thead>
+                                <tr class="row-odd">
+                                    <th class="head">
+                                        <p>title</p>
+                                    </th>
+                                    <th class="head">
+                                        <p>rating</p>
+                                    </th>
+                                    <th class="head">
+                                        <p>year</p>
+                                    </th>
+                                    <th class="head">
+                                        <p>runtime</p>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="row-even">
+                                    <td>
+                                        <p>Almost Famous</p>
+                                    </td>
+                                    <td>
+                                        <p>R</p>
+                                    </td>
+                                    <td>
+                                        <p>2000</p>
+                                    </td>
+                                    <td>
+                                        <p>122</p>
+                                    </td>
+                                </tr>
+                                <tr class="row-odd">
+                                    <td>
+                                        <p>American Pie</p>
+                                    </td>
+                                    <td>
+                                        <p>R</p>
+                                    </td>
+                                    <td>
+                                        <p>1999</p>
+                                    </td>
+                                    <td>
+                                        <p>95</p>
+                                    </td>
+                                </tr>
+                                <tr class="row-even">
+                                    <td>
+                                        <p>Back to the Future</p>
+                                    </td>
+                                    <td>
+                                        <p>PG</p>
+                                    </td>
+                                    <td>
+                                        <p>1985</p>
+                                    </td>
+                                    <td>
+                                        <p>116</p>
+                                    </td>
+                                </tr>
+                                <tr class="row-odd">
+                                    <td>
+                                        <p>Blade Runner</p>
+                                    </td>
+                                    <td>
+                                        <p>R</p>
+                                    </td>
+                                    <td>
+                                        <p>1982</p>
+                                    </td>
+                                    <td>
+                                        <p>117</p>
+                                    </td>
+                                </tr>
+                                <tr class="row-even">
+                                    <td>
+                                        <p>…</p>
+                                    </td>
+                                    <td>
+                                        <p>…</p>
+                                    </td>
+                                    <td>
+                                        <p>…</p>
+                                    </td>
+                                    <td>
+                                        <p>…</p>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="sphinx-tabs docutils container">
+                       
+                        <div aria-labelledby="tab-0-UHl0ZXN0" class="sphinx-tabs-panel group-tab" id="panel-0-UHl0ZXN0"
+                            name="UHl0ZXN0" role="tabpanel" tabindex="0">
+                            <p>The <a class="reference download internal" download=""
+                                    href="../_downloads/7a4845d812e8a045d27091d80ae159ac/test_movies_df.py"><code
+                                        class="xref download docutils literal notranslate"><span class="pre">test_movies_df.py</span></code></a>
+                                script demonstrates pytest-style tests:</p>
+                            <div class="highlight-python notranslate">
+                                <table class="highlighttable">
+                                    <tbody>
+                                        <tr>
+                                           
+                                            <td class="code">
+                                                <div class="highlight">
+                                                    <pre><span></span><span class="ch">#!/usr/bin/env python</span>
+                <span class="c1"># -*- coding: utf-8 -*-</span>
+                <span class="kn">import</span> <span class="nn">pytest</span>
+                <span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+                <span class="kn">import</span> <span class="nn">datatest</span> <span class="k">as</span> <span class="nn">dt</span>
+                
+                
+                <span class="nd">@pytest</span><span class="o">.</span><span class="n">fixture</span><span class="p">(</span><span class="n">scope</span><span class="o">=</span><span class="s1">'module'</span><span class="p">)</span>
+                <span class="nd">@dt</span><span class="o">.</span><span class="n">working_directory</span><span class="p">(</span><span class="vm">__file__</span><span class="p">)</span>
+                <span class="k">def</span> <span class="nf">df</span><span class="p">():</span>
+                    <span class="k">return</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">'movies.csv'</span><span class="p">)</span>
+                
+                
+                <span class="nd">@pytest</span><span class="o">.</span><span class="n">mark</span><span class="o">.</span><span class="n">mandatory</span>
+                <span class="k">def</span> <span class="nf">test_columns</span><span class="p">(</span><span class="n">df</span><span class="p">):</span>
+                    <span class="n">dt</span><span class="o">.</span><span class="n">validate</span><span class="p">(</span>
+                        <span class="n">df</span><span class="o">.</span><span class="n">columns</span><span class="p">,</span>
+                        <span class="p">{</span><span class="s1">'title'</span><span class="p">,</span> <span class="s1">'rating'</span><span class="p">,</span> <span class="s1">'year'</span><span class="p">,</span> <span class="s1">'runtime'</span><span class="p">},</span>
+                    <span class="p">)</span>
+                
+                
+                <span class="k">def</span> <span class="nf">test_title</span><span class="p">(</span><span class="n">df</span><span class="p">):</span>
+                    <span class="n">dt</span><span class="o">.</span><span class="n">validate</span><span class="o">.</span><span class="n">regex</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">'title'</span><span class="p">],</span> <span class="sa">r</span><span class="s1">'^[A-Z]'</span><span class="p">)</span>
+                
+                
+                <span class="k">def</span> <span class="nf">test_rating</span><span class="p">(</span><span class="n">df</span><span class="p">):</span>
+                    <span class="n">dt</span><span class="o">.</span><span class="n">validate</span><span class="o">.</span><span class="n">superset</span><span class="p">(</span>
+                        <span class="n">df</span><span class="p">[</span><span class="s1">'rating'</span><span class="p">],</span>
+                        <span class="p">{</span><span class="s1">'G'</span><span class="p">,</span> <span class="s1">'PG'</span><span class="p">,</span> <span class="s1">'PG-13'</span><span class="p">,</span> <span class="s1">'R'</span><span class="p">,</span> <span class="s1">'NC-17'</span><span class="p">,</span> <span class="s1">'Not Rated'</span><span class="p">},</span>
+                    <span class="p">)</span>
+                
+                
+                <span class="k">def</span> <span class="nf">test_year</span><span class="p">(</span><span class="n">df</span><span class="p">):</span>
+                    <span class="n">dt</span><span class="o">.</span><span class="n">validate</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">'year'</span><span class="p">],</span> <span class="nb">int</span><span class="p">)</span>
+                
+                
+                <span class="k">def</span> <span class="nf">test_runtime</span><span class="p">(</span><span class="n">df</span><span class="p">):</span>
+                    <span class="n">dt</span><span class="o">.</span><span class="n">validate</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">'runtime'</span><span class="p">],</span> <span class="nb">int</span><span class="p">)</span>
+                </pre>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div aria-labelledby="tab-0-VW5pdHRlc3Q=" class="sphinx-tabs-panel group-tab"
+                            id="panel-0-VW5pdHRlc3Q=" name="VW5pdHRlc3Q=" role="tabpanel" tabindex="0" hidden="true">
+                            <p>The <a class="reference download internal" download=""
+                                    href="../test_movies_df_unit.py"><code
+                                        class="xref download docutils literal notranslate"><span class="pre">test_movies_df_unit.py</span></code></a>
+                                script demonstrates unittest-style tests:</p>
+                            <div class="highlight-python notranslate">
+                                <table class="highlighttable">
+                                    <tbody>
+                                        <tr>
+                                            <td class="linenos">
+                                                
+                                            </td>
+                                            <td class="code">
+                                                <div class="highlight">
+                                                    <pre><span></span><span class="ch">#!/usr/bin/env python</span>
+                <span class="c1"># -*- coding: utf-8 -*-</span>
+                <span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+                <span class="kn">import</span> <span class="nn">datatest</span> <span class="k">as</span> <span class="nn">dt</span>
+                
+                
+                <span class="k">def</span> <span class="nf">setUpModule</span><span class="p">():</span>
+                    <span class="k">global</span> <span class="n">df</span>
+                    <span class="k">with</span> <span class="n">dt</span><span class="o">.</span><span class="n">working_directory</span><span class="p">(</span><span class="vm">__file__</span><span class="p">):</span>
+                        <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">'movies.csv'</span><span class="p">)</span>
+                
+                
+                <span class="k">class</span> <span class="nc">TestMovies</span><span class="p">(</span><span class="n">dt</span><span class="o">.</span><span class="n">DataTestCase</span><span class="p">):</span>
+                    <span class="nd">@dt</span><span class="o">.</span><span class="n">mandatory</span>
+                    <span class="k">def</span> <span class="nf">test_columns</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+                        <span class="bp">self</span><span class="o">.</span><span class="n">assertValid</span><span class="p">(</span>
+                            <span class="n">df</span><span class="o">.</span><span class="n">columns</span><span class="p">,</span>
+                            <span class="p">{</span><span class="s1">'title'</span><span class="p">,</span> <span class="s1">'rating'</span><span class="p">,</span> <span class="s1">'year'</span><span class="p">,</span> <span class="s1">'runtime'</span><span class="p">},</span>
+                        <span class="p">)</span>
+                
+                    <span class="k">def</span> <span class="nf">test_title</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+                        <span class="bp">self</span><span class="o">.</span><span class="n">assertValidRegex</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">'title'</span><span class="p">],</span> <span class="sa">r</span><span class="s1">'^[A-Z]'</span><span class="p">)</span>
+                
+                    <span class="k">def</span> <span class="nf">test_rating</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+                        <span class="bp">self</span><span class="o">.</span><span class="n">assertValidSuperset</span><span class="p">(</span>
+                            <span class="n">df</span><span class="p">[</span><span class="s1">'rating'</span><span class="p">],</span>
+                            <span class="p">{</span><span class="s1">'G'</span><span class="p">,</span> <span class="s1">'PG'</span><span class="p">,</span> <span class="s1">'PG-13'</span><span class="p">,</span> <span class="s1">'R'</span><span class="p">,</span> <span class="s1">'NC-17'</span><span class="p">,</span> <span class="s1">'Not Rated'</span><span class="p">},</span>
+                        <span class="p">)</span>
+                
+                    <span class="k">def</span> <span class="nf">test_year</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+                        <span class="bp">self</span><span class="o">.</span><span class="n">assertValid</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">'year'</span><span class="p">],</span> <span class="nb">int</span><span class="p">)</span>
+                
+                    <span class="k">def</span> <span class="nf">test_runtime</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+                        <span class="bp">self</span><span class="o">.</span><span class="n">assertValid</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">'runtime'</span><span class="p">],</span> <span class="nb">int</span><span class="p">)</span>
+                </pre>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <p>You can run these tests, use the following command:</p>
+                    <div class="sphinx-tabs docutils container">
+                        
+                        <div aria-labelledby="tab-1-UHl0ZXN0" class="sphinx-tabs-panel group-tab" id="panel-1-UHl0ZXN0"
+                            name="UHl0ZXN0" role="tabpanel" tabindex="0">
+                            <div class="highlight-none notranslate">
+                                <div class="highlight">
+                                    <pre><span></span>pytest test_movies_df.py
+                </pre>
+                                </div>
+                            </div>
+                        </div>
+                        <div aria-labelledby="tab-1-VW5pdHRlc3Q=" class="sphinx-tabs-panel group-tab"
+                            id="panel-1-VW5pdHRlc3Q=" name="VW5pdHRlc3Q=" role="tabpanel" tabindex="0" hidden="true">
+                            <div class="highlight-none notranslate">
+                                <div class="highlight">
+                                    <pre><span></span>python -m datatest test_movies_df_unit.py
+                </pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="section" id="step-by-step-explanation">
+                    <h2>Step by Step Explanation<a class="headerlink" href="#step-by-step-explanation"
+                            title="Permalink to this headline"></a></h2>
+                    <div class="section" id="define-a-test-fixture">
+                        <h3>1. Define a test fixture<a class="headerlink" href="#define-a-test-fixture"
+                                title="Permalink to this headline"></a></h3>
+                        <p>Define a test fixture that loads the CSV file into a
+                            <a class="reference external"
+                                href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html#pandas.DataFrame"
+                                title="(in pandas v1.2.1)"><code
+                                    class="xref py py-class docutils literal notranslate"><span class="pre">DataFrame</span></code></a>:
+                        </p>
+                        <div class="sphinx-tabs docutils container">
+                           
+                            <div aria-labelledby="tab-2-UHl0ZXN0" class="sphinx-tabs-panel group-tab"
+                                id="panel-2-UHl0ZXN0" name="UHl0ZXN0" role="tabpanel" tabindex="0">
+                                <div class="highlight-default notranslate">
+                                    <table class="highlighttable">
+                                        <tbody>
+                                            <tr>
+                                                
+                                                <td class="code">
+                                                    <div class="highlight">
+                                                        <pre><span></span><span class="nd">@pytest</span><span class="o">.</span><span class="n">fixture</span><span class="p">(</span><span class="n">scope</span><span class="o">=</span><span class="s1">'module'</span><span class="p">)</span>
+                <span class="nd">@dt</span><span class="o">.</span><span class="n">working_directory</span><span class="p">(</span><span class="vm">__file__</span><span class="p">)</span>
+                <span class="k">def</span> <span class="nf">df</span><span class="p">():</span>
+                    <span class="k">return</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">'movies.csv'</span><span class="p">)</span>
+                </pre>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <div aria-labelledby="tab-2-VW5pdHRlc3Q=" class="sphinx-tabs-panel group-tab"
+                                id="panel-2-VW5pdHRlc3Q=" name="VW5pdHRlc3Q=" role="tabpanel" tabindex="0"
+                                hidden="true">
+                                <div class="highlight-default notranslate">
+                                    <table class="highlighttable">
+                                        <tbody>
+                                            <tr>
+                                                <td class="linenos">
+                                                    
+                                                </td>
+                                                <td class="code">
+                                                    <div class="highlight">
+                                                        <pre><span></span><span class="k">def</span> <span class="nf">setUpModule</span><span class="p">():</span>
+                    <span class="k">global</span> <span class="n">df</span>
+                    <span class="k">with</span> <span class="n">dt</span><span class="o">.</span><span class="n">working_directory</span><span class="p">(</span><span class="vm">__file__</span><span class="p">):</span>
+                        <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">'movies.csv'</span><span class="p">)</span>
+                </pre>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="section" id="check-column-names">
+                        <h3>2. Check column names<a class="headerlink" href="#check-column-names"
+                                title="Permalink to this headline"></a></h3>
+                        <p>Check that the data includes the expected column names:</p>
+                        <div class="sphinx-tabs docutils container">
+                            
+                            <div aria-labelledby="tab-3-UHl0ZXN0" class="sphinx-tabs-panel group-tab"
+                                id="panel-3-UHl0ZXN0" name="UHl0ZXN0" role="tabpanel" tabindex="0">
+                                <div class="highlight-default notranslate">
+                                    <table class="highlighttable">
+                                        <tbody>
+                                            <tr>
+                                                <td class="linenos">
+                                                    
+                                                </td>
+                                                <td class="code">
+                                                    <div class="highlight">
+                                                        <pre><span></span><span class="nd">@pytest</span><span class="o">.</span><span class="n">mark</span><span class="o">.</span><span class="n">mandatory</span>
+                <span class="k">def</span> <span class="nf">test_columns</span><span class="p">(</span><span class="n">df</span><span class="p">):</span>
+                    <span class="n">dt</span><span class="o">.</span><span class="n">validate</span><span class="p">(</span>
+                        <span class="n">df</span><span class="o">.</span><span class="n">columns</span><span class="p">,</span>
+                        <span class="p">{</span><span class="s1">'title'</span><span class="p">,</span> <span class="s1">'rating'</span><span class="p">,</span> <span class="s1">'year'</span><span class="p">,</span> <span class="s1">'runtime'</span><span class="p">},</span>
+                    <span class="p">)</span>
+                </pre>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <div aria-labelledby="tab-3-VW5pdHRlc3Q=" class="sphinx-tabs-panel group-tab"
+                                id="panel-3-VW5pdHRlc3Q=" name="VW5pdHRlc3Q=" role="tabpanel" tabindex="0"
+                                hidden="true">
+                                <div class="highlight-default notranslate">
+                                    <table class="highlighttable">
+                                        <tbody>
+                                            <tr>
+                                                
+                                                <td class="code">
+                                                    <div class="highlight">
+                                                        <pre><span></span>    <span class="nd">@dt</span><span class="o">.</span><span class="n">mandatory</span>
+                    <span class="k">def</span> <span class="nf">test_columns</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+                        <span class="bp">self</span><span class="o">.</span><span class="n">assertValid</span><span class="p">(</span>
+                            <span class="n">df</span><span class="o">.</span><span class="n">columns</span><span class="p">,</span>
+                            <span class="p">{</span><span class="s1">'title'</span><span class="p">,</span> <span class="s1">'rating'</span><span class="p">,</span> <span class="s1">'year'</span><span class="p">,</span> <span class="s1">'runtime'</span><span class="p">},</span>
+                        <span class="p">)</span>
+                </pre>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <p>This validation requires that the set of values in <code
+                                class="docutils literal notranslate"><span class="pre">df.columns</span></code>
+                            matches the required <a class="reference external"
+                                href="https://docs.python.org/3/library/stdtypes.html#set"
+                                title="(in Python v3.9)"><code
+                                    class="xref py py-class docutils literal notranslate"><span class="pre">set</span></code></a>.
+                            The <code class="docutils literal notranslate"><span class="pre">df.columns</span></code>
+                            attribute is
+                            an <a class="reference external"
+                                href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.Index.html#pandas.Index"
+                                title="(in pandas v1.2.1)"><code
+                                    class="xref py py-class docutils literal notranslate"><span class="pre">Index</span></code></a>
+                            object—datatest treats this the same
+                            as any other sequence of values.</p>
+                        <p>This test is marked <code
+                                class="docutils literal notranslate"><span class="pre">mandatory</span></code> because
+                            it’s a prerequisite that must
+                            be satisfied before any of the other tests can pass. When a mandatory
+                            test fails, the test suite stops immediately and no more tests are run.</p>
+                    </div>
+                    <div class="section" id="check-title-values">
+                        <h3>3. Check ‘title’ values<a class="headerlink" href="#check-title-values"
+                                title="Permalink to this headline"></a></h3>
+                        <p>Check that values in the <strong>title</strong> column begin with an upper-case letter:</p>
+                        <div class="sphinx-tabs docutils container">
+                           
+                            <div aria-labelledby="tab-4-UHl0ZXN0" class="sphinx-tabs-panel group-tab"
+                                id="panel-4-UHl0ZXN0" name="UHl0ZXN0" role="tabpanel" tabindex="0">
+                                <div class="highlight-default notranslate">
+                                    <table class="highlighttable">
+                                        <tbody>
+                                            <tr>
+                                                
+                                                <td class="code">
+                                                    <div class="highlight">
+                                                        <pre><span></span><span class="k">def</span> <span class="nf">test_title</span><span class="p">(</span><span class="n">df</span><span class="p">):</span>
+                    <span class="n">dt</span><span class="o">.</span><span class="n">validate</span><span class="o">.</span><span class="n">regex</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">'title'</span><span class="p">],</span> <span class="sa">r</span><span class="s1">'^[A-Z]'</span><span class="p">)</span>
+                </pre>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <div aria-labelledby="tab-4-VW5pdHRlc3Q=" class="sphinx-tabs-panel group-tab"
+                                id="panel-4-VW5pdHRlc3Q=" name="VW5pdHRlc3Q=" role="tabpanel" tabindex="0"
+                                hidden="true">
+                                <div class="highlight-default notranslate">
+                                    <table class="highlighttable">
+                                        <tbody>
+                                            <tr>
+                                                <td class="linenos">
+                                                    <div class="linenodiv">
+                                                        
+                                                    </div>
+                                                </td>
+                                                <td class="code">
+                                                    <div class="highlight">
+                                                        <pre><span></span>    <span class="k">def</span> <span class="nf">test_title</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+                        <span class="bp">self</span><span class="o">.</span><span class="n">assertValidRegex</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">'title'</span><span class="p">],</span> <span class="sa">r</span><span class="s1">'^[A-Z]'</span><span class="p">)</span>
+                </pre>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <p>This validation checks that each value in the <code
+                                class="docutils literal notranslate"><span class="pre">df['title']</span></code> matches
+                            the regular expression <code
+                                class="docutils literal notranslate"><span class="pre">^[A-Z]</span></code>.</p>
+                    </div>
+                    <div class="section" id="check-rating-values">
+                        <h3>4. Check ‘rating’ values<a class="headerlink" href="#check-rating-values"
+                                title="Permalink to this headline"></a></h3>
+                        <p>Check that values in the <strong>rating</strong> column match one of the allowed codes:</p>
+                        <div class="sphinx-tabs docutils container">
+                           
+                            <div aria-labelledby="tab-5-UHl0ZXN0" class="sphinx-tabs-panel group-tab"
+                                id="panel-5-UHl0ZXN0" name="UHl0ZXN0" role="tabpanel" tabindex="0">
+                                <div class="highlight-default notranslate">
+                                    <table class="highlighttable">
+                                        <tbody>
+                                            <tr>
+                                                
+                                                <td class="code">
+                                                    <div class="highlight">
+                                                        <pre><span></span><span class="k">def</span> <span class="nf">test_rating</span><span class="p">(</span><span class="n">df</span><span class="p">):</span>
+                    <span class="n">dt</span><span class="o">.</span><span class="n">validate</span><span class="o">.</span><span class="n">superset</span><span class="p">(</span>
+                        <span class="n">df</span><span class="p">[</span><span class="s1">'rating'</span><span class="p">],</span>
+                        <span class="p">{</span><span class="s1">'G'</span><span class="p">,</span> <span class="s1">'PG'</span><span class="p">,</span> <span class="s1">'PG-13'</span><span class="p">,</span> <span class="s1">'R'</span><span class="p">,</span> <span class="s1">'NC-17'</span><span class="p">,</span> <span class="s1">'Not Rated'</span><span class="p">},</span>
+                    <span class="p">)</span>
+                </pre>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <div aria-labelledby="tab-5-VW5pdHRlc3Q=" class="sphinx-tabs-panel group-tab"
+                                id="panel-5-VW5pdHRlc3Q=" name="VW5pdHRlc3Q=" role="tabpanel" tabindex="0"
+                                hidden="true">
+                                <div class="highlight-default notranslate">
+                                    <table class="highlighttable">
+                                        <tbody>
+                                            <tr>
+                                                
+                                                <td class="code">
+                                                    <div class="highlight">
+                                                        <pre><span></span>    <span class="k">def</span> <span class="nf">test_rating</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+                        <span class="bp">self</span><span class="o">.</span><span class="n">assertValidSuperset</span><span class="p">(</span>
+                            <span class="n">df</span><span class="p">[</span><span class="s1">'rating'</span><span class="p">],</span>
+                            <span class="p">{</span><span class="s1">'G'</span><span class="p">,</span> <span class="s1">'PG'</span><span class="p">,</span> <span class="s1">'PG-13'</span><span class="p">,</span> <span class="s1">'R'</span><span class="p">,</span> <span class="s1">'NC-17'</span><span class="p">,</span> <span class="s1">'Not Rated'</span><span class="p">},</span>
+                        <span class="p">)</span>
+                </pre>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <p>This validation checks that the values in <code
+                                class="docutils literal notranslate"><span class="pre">df['rating']</span></code> are
+                            also
+                            contained in the given set.</p>
+                    </div>
+                    <div class="section" id="check-year-and-runtime-types">
+                        <h3>5. Check ‘year’ and ‘runtime’ types<a class="headerlink"
+                                href="#check-year-and-runtime-types" title="Permalink to this headline"></a></h3>
+                        <p>Check that values in the <strong>year</strong> and <strong>runtime</strong> columns are
+                            integers:</p>
+                        <div class="sphinx-tabs docutils container">
+                            
+                            <div aria-labelledby="tab-6-UHl0ZXN0" class="sphinx-tabs-panel group-tab"
+                                id="panel-6-UHl0ZXN0" name="UHl0ZXN0" role="tabpanel" tabindex="0">
+                                <div class="highlight-default notranslate">
+                                    <table class="highlighttable">
+                                        <tbody>
+                                            <tr>
+                                                
+                                                <td class="code">
+                                                    <div class="highlight">
+                                                        <pre><span></span><span class="k">def</span> <span class="nf">test_year</span><span class="p">(</span><span class="n">df</span><span class="p">):</span>
+                    <span class="n">dt</span><span class="o">.</span><span class="n">validate</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">'year'</span><span class="p">],</span> <span class="nb">int</span><span class="p">)</span>
+                </pre>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="highlight-default notranslate">
+                                    <table class="highlighttable">
+                                        <tbody>
+                                            <tr>
+                                             
+                                                <td class="code">
+                                                    <div class="highlight">
+                                                        <pre><span></span><span class="k">def</span> <span class="nf">test_runtime</span><span class="p">(</span><span class="n">df</span><span class="p">):</span>
+                    <span class="n">dt</span><span class="o">.</span><span class="n">validate</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">'runtime'</span><span class="p">],</span> <span class="nb">int</span><span class="p">)</span>
+                </pre>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <div aria-labelledby="tab-6-VW5pdHRlc3Q=" class="sphinx-tabs-panel group-tab"
+                                id="panel-6-VW5pdHRlc3Q=" name="VW5pdHRlc3Q=" role="tabpanel" tabindex="0"
+                                hidden="true">
+                                <div class="highlight-default notranslate">
+                                    <table class="highlighttable">
+                                        <tbody>
+                                            <tr>
+                                               
+                                                <td class="code">
+                                                    <div class="highlight">
+                                                        <pre><span></span>    <span class="k">def</span> <span class="nf">test_year</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+                        <span class="bp">self</span><span class="o">.</span><span class="n">assertValid</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">'year'</span><span class="p">],</span> <span class="nb">int</span><span class="p">)</span>
+                </pre>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="highlight-default notranslate">
+                                    <table class="highlighttable">
+                                        <tbody>
+                                            <tr>
+                                                
+                                                <td class="code">
+                                                    <div class="highlight">
+                                                        <pre><span></span>    <span class="k">def</span> <span class="nf">test_runtime</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+                        <span class="bp">self</span><span class="o">.</span><span class="n">assertValid</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">'runtime'</span><span class="p">],</span> <span class="nb">int</span><span class="p">)</span>
+                </pre>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+            <p>tutorial sourced from datatest</p>
+        </div>
+
+        </div>
+    </section>
+
+    <!-- Bootstrap core JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Core theme JS-->
+    <script src="js/scripts.js"></script>
+
+    <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+</body>
+
+</html>
