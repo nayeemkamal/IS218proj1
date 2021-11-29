@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>IS218 Tutorial</title>
+    <!-- Font Awesome icons (free version)-->
+    <script src="https://use.fontawesome.com/releases/v5.15.3/js/all.js" crossorigin="anonymous"></script>
+    <!-- Google fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+        rel="stylesheet" />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="css/styles.css" rel="stylesheet" />
+</head>
+
+<body id="page-top">
+    <!-- Navigation-->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+        <div class="container px-4 px-lg-5">
+            <a class="navbar-brand" href="./index.html">IS218 Tutorial</a>
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+                aria-label="Toggle navigation">
+                Menu
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="./git.html">GIT</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./terminal.html">Terminal</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./docker.html">Docker</a></li>
+                    <li class="nav-item"><a class="nav-link" href="vi.html">Vi</a></li>
+                    <li class="nav-item"><a class="nav-link" href="pylint.html">Pylint</a></li>
+
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Masthead-->
+    <header class="masthead">
+        <div class="container px-4 px-lg-5 d-flex h-100 align-items-center justify-content-center">
+            <div class="d-flex justify-content-center">
+                <div class="text-center">
+                    <h1 class="mx-auto my-0 text-uppercase">Pylint Tutorial</h1>
+                    <h2 class="text-white-50 mx-auto mt-2 mb-5">Tutorial on how to get started with Pylint and python.
+                    </h2>
+                    <a class="btn btn-primary" href="#projects">Get Started with Pylint</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Projects-->
+    <section class="projects-section bg-light" id="projects">
+        <div class="container px-4 px-lg-5">
+            <!-- Featured Project Row-->
+            <div class="row gx-0 mb-4 mb-lg-5 align-items-center">
+                <h3>What is Pylint?</h3>
+                <p>Pylint is a tool that checks for errors in Python code, tries to enforce a coding standard and looks
+                    for code issues. It can also look for certain type errors, it can recommend suggestions about how
+                    particular blocks can be refactored and can offer you details about the code’s complexity.</p>
+                <div class="container px-4 px-lg-5">
+                    <!-- Featured Project Row-->
+                    <section id="getting-started">
+                        <h2>Getting Started</h2>
+                        <p>Running Pylint with no arguments will invoke the help dialogue and give you an
+                            idea of the arguments available to you. Do that now, i.e.:</p>
+                        <div class="highlight-console notranslate">
+                            <div class="highlight">
+                                <pre><span></span><span class="go">  Desktop$ pylint</span>
+                            <span class="go">...</span>
+                            <span class="go">a bunch of stuff</span>
+                            <span class="go">...</span>
+                            </pre>
+                            </div>
+                        </div>
+                        <p>A couple of the options that we'll focus on here are:</p>
+                        <div class="highlight-default notranslate" style="position: relative;">
+                            <div class="highlight">
+                                <pre><span></span><span class="n">Commands</span><span class="p">:</span>
+                              <span class="o">--</span><span class="n">help</span><span class="o">-</span><span class="n">msg</span><span class="o">=&lt;</span><span class="n">msg</span><span class="o">-</span><span class="nb">id</span><span class="o">&gt;</span>
+                              <span class="o">--</span><span class="n">generate</span><span class="o">-</span><span class="n">rcfile</span>
+                            <span class="n">Messages</span> <span class="n">control</span><span class="p">:</span>
+                              <span class="o">--</span><span class="n">disable</span><span class="o">=&lt;</span><span class="n">msg</span><span class="o">-</span><span class="n">ids</span><span class="o">&gt;</span>
+                            <span class="n">Reports</span><span class="p">:</span>
+                              <span class="o">--</span><span class="n">reports</span><span class="o">=&lt;</span><span class="n">y</span> <span class="ow">or</span> <span class="n">n</span><span class="o">&gt;</span>
+                              <span class="o">--</span><span class="n">output</span><span class="o">-</span><span class="nb">format</span><span class="o">=&lt;</span><span class="nb">format</span><span class="o">&gt;</span>
+                            </pre>
+                            </div>
+                        </div>
+                        <p>If you need more detail, you can also ask for an even longer help message,
+                            like so:</p>
+                        <div class="highlight-default notranslate" style="position: relative;">
+                            <div class="highlight">
+                                <pre><span></span>  Desktop$ pylint --long-help
+                            ...
+                            Even more stuff
+                            ...
+                            </pre>
+                            </div>
+                        </div>
+                        <p>Pay attention to the last bit of this longer help output. This gives you a
+                            hint of what
+                            Pylint is going to <code
+                                class="docutils literal notranslate"><span class="pre">pick</span> <span class="pre">on</span></code>:
+                        </p>
+                        <div class="highlight-default notranslate" style="position: relative;">
+                            <div class="highlight">
+                                <pre><span></span><span class="n">Output</span><span class="p">:</span>
+                               <span class="n">Using</span> <span class="n">the</span> <span class="n">default</span> <span class="n">text</span> <span class="n">output</span><span class="p">,</span> <span class="n">the</span> <span class="n">message</span> <span class="nb">format</span> <span class="ow">is</span> <span class="p">:</span>
+                              <span class="n">MESSAGE_TYPE</span><span class="p">:</span> <span class="n">LINE_NUM</span><span class="p">:[</span><span class="n">OBJECT</span><span class="p">:]</span> <span class="n">MESSAGE</span>
+                              <span class="n">There</span> <span class="n">are</span> <span class="mi">5</span> <span class="n">kind</span> <span class="n">of</span> <span class="n">message</span> <span class="n">types</span> <span class="p">:</span>
+                              <span class="o">*</span> <span class="p">(</span><span class="n">C</span><span class="p">)</span> <span class="n">convention</span><span class="p">,</span> <span class="k">for</span> <span class="n">programming</span> <span class="n">standard</span> <span class="n">violation</span>
+                              <span class="o">*</span> <span class="p">(</span><span class="n">R</span><span class="p">)</span> <span class="n">refactor</span><span class="p">,</span> <span class="k">for</span> <span class="n">bad</span> <span class="n">code</span> <span class="n">smell</span>
+                              <span class="o">*</span> <span class="p">(</span><span class="n">W</span><span class="p">)</span> <span class="n">warning</span><span class="p">,</span> <span class="k">for</span> <span class="n">python</span> <span class="n">specific</span> <span class="n">problems</span>
+                              <span class="o">*</span> <span class="p">(</span><span class="n">E</span><span class="p">)</span> <span class="n">error</span><span class="p">,</span> <span class="k">for</span> <span class="n">probable</span> <span class="n">bugs</span> <span class="ow">in</span> <span class="n">the</span> <span class="n">code</span>
+                              <span class="o">*</span> <span class="p">(</span><span class="n">F</span><span class="p">)</span> <span class="n">fatal</span><span class="p">,</span> <span class="k">if</span> <span class="n">an</span> <span class="n">error</span> <span class="n">occurred</span> <span class="n">which</span> <span class="n">prevented</span> <span class="n">pylint</span> <span class="kn">from</span> <span class="nn">doing</span>
+                              <span class="n">further</span> <span class="n">processing</span><span class="o">.</span>
+                            </pre>
+                            </div>
+                        </div>
+                        <p>When Pylint is first run on a fresh piece of code, a common complaint is that it
+                            is too <code class="docutils literal notranslate"><span class="pre">noisy</span></code>. The
+                            current default configuration is set to enforce all possible
+                            warnings. We'll use some of the options I noted above to make it suit your
+                            preferences a bit better (and thus make it emit messages only when needed).</p>
+                    </section>
+                    <section id="the-next-step">
+                        <h2>The Next Step</h2>
+                        <p>Now that we got some configuration stuff out of the way, let's see what we can
+                        do with the remaining warnings.</p>
+                        <p>If we add a docstring to describe what the code is meant to do that will help.
+                        There are 5 <code class="docutils literal notranslate"><span class="pre">invalid-name</span></code> messages that we will get to later.  Lastly, I
+                        put an unnecessary semicolon at the end of the import line so I'll
+                        fix that too. To sum up, I'll add a docstring to line 2, and remove the <code class="docutils literal notranslate"><span class="pre">;</span></code>
+                        from line 3.</p>
+                        <p>Here is the updated code:</p>
+                        <div class="highlight-python notranslate" style="position: relative;"><div class="highlight"><pre><span></span><span class="ch">#!/usr/bin/env python3</span>
+                        <span class="sd">"""This script prompts a user to enter a message to encode or decode</span>
+                        <span class="sd">using a classic Caesar shift substitution (3 letter shift)"""</span>
+                        
+                        <span class="kn">import</span> <span class="nn">string</span>
+                        
+                        <span class="n">shift</span> <span class="o">=</span> <span class="mi">3</span>
+                        <span class="n">choice</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"would you like to encode or decode?"</span><span class="p">)</span>
+                        <span class="n">word</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"Please enter text"</span><span class="p">)</span>
+                        <span class="n">letters</span> <span class="o">=</span> <span class="n">string</span><span class="o">.</span><span class="n">ascii_letters</span> <span class="o">+</span> <span class="n">string</span><span class="o">.</span><span class="n">punctuation</span> <span class="o">+</span> <span class="n">string</span><span class="o">.</span><span class="n">digits</span>
+                        <span class="n">encoded</span> <span class="o">=</span> <span class="s1">''</span>
+                        <span class="k">if</span> <span class="n">choice</span> <span class="o">==</span> <span class="s2">"encode"</span><span class="p">:</span>
+                            <span class="k">for</span> <span class="n">letter</span> <span class="ow">in</span> <span class="n">word</span><span class="p">:</span>
+                                <span class="k">if</span> <span class="n">letter</span> <span class="o">==</span> <span class="s1">' '</span><span class="p">:</span>
+                                    <span class="n">encoded</span> <span class="o">=</span> <span class="n">encoded</span> <span class="o">+</span> <span class="s1">' '</span>
+                                <span class="k">else</span><span class="p">:</span>
+                                    <span class="n">x</span> <span class="o">=</span> <span class="n">letters</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="n">letter</span><span class="p">)</span> <span class="o">+</span> <span class="n">shift</span>
+                                    <span class="n">encoded</span> <span class="o">=</span> <span class="n">encoded</span> <span class="o">+</span> <span class="n">letters</span><span class="p">[</span><span class="n">x</span><span class="p">]</span>
+                        <span class="k">if</span> <span class="n">choice</span> <span class="o">==</span> <span class="s2">"decode"</span><span class="p">:</span>
+                            <span class="k">for</span> <span class="n">letter</span> <span class="ow">in</span> <span class="n">word</span><span class="p">:</span>
+                                <span class="k">if</span> <span class="n">letter</span> <span class="o">==</span> <span class="s1">' '</span><span class="p">:</span>
+                                    <span class="n">encoded</span> <span class="o">=</span> <span class="n">encoded</span> <span class="o">+</span> <span class="s1">' '</span>
+                                <span class="k">else</span><span class="p">:</span>
+                                    <span class="n">x</span> <span class="o">=</span> <span class="n">letters</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="n">letter</span><span class="p">)</span> <span class="o">-</span> <span class="n">shift</span>
+                                    <span class="n">encoded</span> <span class="o">=</span> <span class="n">encoded</span> <span class="o">+</span> <span class="n">letters</span><span class="p">[</span><span class="n">x</span><span class="p">]</span>
+                        
+                        <span class="nb">print</span><span class="p">(</span><span class="n">encoded</span><span class="p">)</span>
+                        </pre></div>
+                        </div>
+                        <p>Here is what happens when we run it:</p>
+                        <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">  Desktop$ pylint simplecaesar.py</span>
+                        <span class="go">************* Module simplecaesar</span>
+                        <span class="go">simplecaesar.py:7:0: C0103: Constant name "shift" doesn't conform to UPPER_CASE naming style (invalid-name)</span>
+                        <span class="go">simplecaesar.py:11:0: C0103: Constant name "encoded" doesn't conform to UPPER_CASE naming style (invalid-name)</span>
+                        <span class="go">simplecaesar.py:15:12: C0103: Constant name "encoded" doesn't conform to UPPER_CASE naming style (invalid-name)</span>
+                        
+                        <span class="go">------------------------------------------------------------------</span>
+                        <span class="go">Your code has been rated at 8.42/10 (previous run: 7.37/10, +1.05)</span>
+                        </pre></div>
+                        </div>
+                        <p>Nice! Pylint told us how much our code rating has improved since our last run, and we're down to just the <code class="docutils literal notranslate"><span class="pre">invalid-name</span></code> messages.</p>
+                        <p>There are fairly well defined conventions around naming things like instance
+                        variables, functions, classes, etc.  The conventions focus on the use of
+                        UPPERCASE and lowercase as well as the characters that separate multiple words
+                        in the name.  This lends itself well to checking via a regular expression, thus
+                        the <strong>should match (([A-Z_][A-Z1-9_]*)|(__.*__))$</strong>.</p>
+                        <p>In this case Pylint is telling me that those variables appear to be constants
+                        and should be all UPPERCASE. This is an in-house convention that has lived with Pylint
+                        since its inception. You too can create your own in-house naming
+                        conventions but for the purpose of this tutorial, we want to stick to the <a class="reference external" href="https://www.python.org/dev/peps/pep-0008/">PEP 8</a>
+                        standard. In this case, the variables I declared should follow the convention
+                        of all lowercase.  The appropriate rule would be something like:
+                        "should match [a-z_][a-z0-9_]{2,30}$".  Notice the lowercase letters in the
+                        regular expression (a-z versus A-Z).</p>
+                        <p>If we run that rule using a <code class="docutils literal notranslate"><span class="pre">--const-rgx='[a-z\_][a-z0-9\_]{2,30}$'</span></code> option, it
+                        will now be quite quiet:</p>
+                        <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">  Desktop$ pylint --const-rgx='[a-z_][a-z0-9_]{2,30}$' simplecaesar.py</span>
+                        
+                        <span class="go">-------------------------------------------------------------------</span>
+                        <span class="go">Your code has been rated at 10.00/10 (previous run: 8.42/10, +1.58)</span>
+                        </pre></div>
+                        </div>
+                        <p>Regular expressions can be quite a beast so take my word on this particular
+                        example but go ahead and <a class="reference external" href="https://docs.python.org/library/re.html">read up</a> on them if you want.</p>
+                        <div class="admonition tip">
+                        <p class="admonition-title">Tip</p>
+                        <p>It would really be a pain to specify that regex on the command line all the time, particularly if we're using many other options.
+                        That's what a configuration file is for. We can configure our Pylint to
+                        store our options for us so we don't have to declare them on the command line.  Using a configuration file is a nice way of formalizing your rules and
+                        quickly sharing them with others. Invoking <code class="docutils literal notranslate"><span class="pre">pylint</span> <span class="pre">--generate-rcfile</span></code> will create a sample rcfile with all the options set and explained in comments.</p>
+                        </div>
+                        </section>
+                        <p>tutorial sourced from pylint pycqa</p>
+                </div>
+            </div>
+            <h1>Glossary</h1>
+            <table>
+                <tr>
+                    <th>Term</th>
+                    <th>Definition</th>
+                </tr>
+                <tr>
+                    <td>Factory</td>
+                    <td>A Creational Design Pattern that allows an interface or a class to create an object, but lets
+                        subclasses decide which class or object to instantiate</td>
+                </tr>
+                <tr>
+                    <td>Facade</td>
+                    <td> A Structural Design pattern that provides a simpler unified interface to a more complex system
+                    </td>
+                </tr>
+                <tr>
+                    <td>Object</td>
+                    <td>A collection of data (variables) and methods (functions) that act on those data.</td>
+                </tr>
+                <tr>
+                    <td>Class</td>
+                    <td>A blueprint of a class that defines the data and methods.</td>
+                </tr>
+                <tr>
+                    <td>Namespace</td>
+                    <td>A collection of currently defined symbolic names along with information about the object that
+                        each name references</td>
+                </tr>
+                <tr>
+                    <td>Constructor</td>
+                    <td>Used to instantiate objects and initialize data members</td>
+                </tr>
+                <tr>
+                    <td>Fixture</td>
+                    <td>A pytest feature. Initialize test functions and create a baseline for reliable testing</td>
+                </tr>
+                <tr>
+                    <td>Type hint</td>
+                    <td>A solution to statically indicate the type of a value within your Python code</td>
+                </tr>
+                <tr>
+                    <td>Type casting</td>
+                    <td>A method used to change the variables/ values declared in a certain data type into a different
+                        data type to match the operation required to be performed by the code</td>
+                </tr>
+                <tr>
+                    <td>Unit test</td>
+                    <td>A method of testing the simplest pieces of code in a program to ensure functionality.</td>
+                </tr>
+                <tr>
+                    <td>Static</td>
+                    <td>A variable declared inside a class but outside of a method or a method written outside of a
+                        class.</td>
+                </tr>
+                <tr>
+                    <td>Class method</td>
+                    <td>A method which is bound to a class and not an object of the class. Can modify a class, affecting
+                        all instances of a class.</td>
+                </tr>
+                <tr>
+                    <td>Method</td>
+                    <td>A function/piece of code that is only available to objects of a class.</td>
+                </tr>
+            </table>
+        </div>
+
+        </div>
+    </section>
+
+    <!-- Bootstrap core JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Core theme JS-->
+    <script src="js/scripts.js"></script>
+
+    <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+</body>
+
+</html>
